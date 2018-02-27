@@ -39,8 +39,13 @@ public class ROT13 {
     }
 
     public static String rotate(String s, Character c) {
-       return null;
+        String[] a = s.split("");
+        List<String> list = Arrays.asList(a);
+        Collections.rotate(list, c+1);
+        String joined = String.join("", list);
+        System.out.println(joined);
+        return joined;
 
 
-    }
+       }
 }
